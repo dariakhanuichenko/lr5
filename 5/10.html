@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #car {
+      position: relative;
+      cursor: pointer;
+
+  </style>
+</head>
+
+<body>
+
+  <img id="car" src="1.gif" width="400px">
+
+
+  <script>
+    car.onclick = function() {
+      var start = Date.now(); // сохранить время начала
+
+      var timer = setInterval(function() {
+        // вычислить сколько времени прошло из opts.duration
+        var timePassed = Date.now() - start;
+
+        car.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 4000) clearInterval(timer);
+
+      }, 20);
+    }
+  </script>
+  </br>
+<img id="audi" src="a.png" >
+<script>
+audi.onclick = function() {
+      var start = Date.now(); // сохранить время начала
+
+      var timer = setInterval(function() {
+        // вычислить сколько времени прошло из opts.duration
+        var timePassed = Date.now() - start;
+
+        audi.style.width = timePassed *0.12 + 'px';
+
+        if (timePassed > 4000) clearInterval(timer);
+
+      }, 20);
+    } </script>
+
+</body>
+
+</html>

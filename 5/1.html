@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+        <script>
+function Change(){
+var x= document.getElementById("x").value;
+var y= document.getElementById('y').value;
+//change.AddEventListener('blur',function(){
+if(x!=""&y!=""){
+var temp=x;
+document.getElementById("x").value=y;
+document.getElementById('y').value=temp;
+//});
+}}
+</script>
+    </head>
+    <body class="change">
+           <input type="text" id="x"  onblur="Change()">
+		   <input type="text" id="y" onblur="Change()"  >
+
+    </body>
+</html>
